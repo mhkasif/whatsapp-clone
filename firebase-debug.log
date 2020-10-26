@@ -1,0 +1,66 @@
+[debug] [2020-10-26T20:00:48.598Z] ----------------------------------------------------------------------
+[debug] [2020-10-26T20:00:48.601Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2020-10-26T20:00:48.601Z] CLI Version:   7.14.0
+[debug] [2020-10-26T20:00:48.601Z] Platform:      darwin
+[debug] [2020-10-26T20:00:48.601Z] Node Version:  v12.18.4
+[debug] [2020-10-26T20:00:48.603Z] Time:          Tue Oct 27 2020 01:00:48 GMT+0500 (Pakistan Standard Time)
+[debug] [2020-10-26T20:00:48.603Z] ----------------------------------------------------------------------
+[debug] [2020-10-26T20:00:48.603Z] 
+[debug] [2020-10-26T20:00:48.680Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-10-26T20:00:48.680Z] > authorizing via signed-in user
+[debug] [2020-10-26T20:00:48.681Z] [iam] checking project mhk-whatsapp-clone for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-10-26T20:00:48.683Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/mhk-whatsapp-clone:testIamPermissions  
+
+[debug] [2020-10-26T20:00:50.161Z] <<< HTTP RESPONSE 200
+[debug] [2020-10-26T20:00:50.164Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/mhk-whatsapp-clone  
+ 
+[debug] [2020-10-26T20:00:50.678Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'mhk-whatsapp-clone'...
+[info] 
+[info] i  deploying hosting
+[debug] [2020-10-26T20:00:50.682Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/mhk-whatsapp-clone/versions  
+
+[debug] [2020-10-26T20:00:52.819Z] <<< HTTP RESPONSE 200
+[info] i  hosting[mhk-whatsapp-clone]: beginning deploy...
+[info] i  hosting[mhk-whatsapp-clone]: found 19 files in build
+[debug] [2020-10-26T20:00:53.537Z] [hosting] hash cache [YnVpbGQ] stored for 19 files
+[debug] [2020-10-26T20:00:53.537Z] [hosting][hash queue][FINAL]
+[debug] [2020-10-26T20:00:53.537Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/mhk-whatsapp-clone/versions/708200e4b61c3569:populateFiles  
+ <request body omitted>
+[debug] [2020-10-26T20:00:55.481Z] <<< HTTP RESPONSE 200
+[debug] [2020-10-26T20:00:55.484Z] [hosting][populate queue][FINAL]
+[debug] [2020-10-26T20:00:55.484Z] [hosting] uploads queued: 1
+[debug] [2020-10-26T20:00:57.944Z] [hosting][upload queue][FINAL]
+[info] ✔  hosting[mhk-whatsapp-clone]: file upload complete
+[debug] [2020-10-26T20:00:57.945Z] [hosting] deploy completed after 5125ms
+[debug] [2020-10-26T20:00:58.260Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "mhk-whatsapp-clone"
+    },
+    "site": "mhk-whatsapp-clone",
+    "version": "sites/mhk-whatsapp-clone/versions/708200e4b61c3569"
+  }
+]
+[info] i  hosting[mhk-whatsapp-clone]: finalizing version...
+[debug] [2020-10-26T20:00:58.261Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/mhk-whatsapp-clone/versions/708200e4b61c3569?updateMask=status  
+
+[debug] [2020-10-26T20:00:59.992Z] <<< HTTP RESPONSE 200
+[debug] [2020-10-26T20:00:59.992Z] [hosting] finalized version for mhk-whatsapp-clone:
+[info] ✔  hosting[mhk-whatsapp-clone]: version finalized
+[info] i  hosting[mhk-whatsapp-clone]: releasing new version...
+[debug] [2020-10-26T20:00:59.993Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/mhk-whatsapp-clone/releases?version_name=sites/mhk-whatsapp-clone/versions/708200e4b61c3569  
+
