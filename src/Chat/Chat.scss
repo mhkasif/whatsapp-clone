@@ -1,0 +1,85 @@
+.chat {
+  flex: 0.65;
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+    &-info {
+      flex: 1;
+      padding-left: 20px;
+      h3 {
+        margin-bottom: 3px;
+        font-weight: 500;
+      }
+      p {
+        color: gray;
+      }
+    }
+    &-icons {
+      display: flex;
+      justify-content: space-between;
+      min-width: 100px;
+    }
+  }
+  &__body {
+    background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
+    flex: 1;
+    background-repeat: repeat;
+    background-position: center;
+    padding: 30px;
+  }
+  &__message {
+    position: relative;
+    font-size: 16px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    width: fit-content;
+    margin-bottom: 30px;
+    &-name {
+      position: absolute;
+      top: -15px;
+      font-size: xx-small;
+      font-weight: 800;
+    }
+    &-time {
+      margin-left: 10px;
+      font-size: xx-small;
+    }
+  }
+  &__receiver {
+    margin-left: auto;
+    background-color: #dcf8c6;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 62px;
+    border-top: 1px solid lightgray;
+    form {
+      flex: 1;
+      display: flex;
+      button {
+        display: none;
+      }
+      input {
+        flex: 1;
+        border-radius: 30px;
+        padding: 10px;
+        border: none;
+        outline: none;
+      }
+    }
+    .MuiSvgIcon-root{
+        padding:10px;
+        color:gray;
+
+    }
+  }
+}
